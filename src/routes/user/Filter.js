@@ -51,7 +51,7 @@ const Filter = ({
     const fields = getFieldsValue()
     for (let item in fields) {
       if ({}.hasOwnProperty.call(fields, item)) {
-        if (fields[item] instanceof Array) {
+        if (Array.isArray(fields[item])) {
           fields[item] = []
         } else {
           fields[item] = undefined
